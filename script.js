@@ -32,173 +32,165 @@ function updateposition(x, y) {
 function changeDirection(direction, steps) {
 
     switch (direction) {
-        case 'n': {
-            let tempx = queen.position.x - steps;
+                    case 'n': {
+                        let tempx = queen.position.x - steps;
 
-            if (tempx >= 0 && tempx < 8) {
-                queen.position.x = tempx;
-                console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
-                updateposition(queen.position.x, queen.position.y);
-
-
-            } else {
-                console.log("Outside the Boundary");
-
-            }
-            break;
-        }
+                        if (tempx >= 0 && tempx < 8) {
+                            queen.position.x = tempx;
+                            console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
+                            updateposition(queen.position.x, queen.position.y);
 
 
-        case 's': {
-            let tempx = queen.position.x + steps;
+                        } else {
+                            console.log("Outside the Boundary");
 
-            if (tempx >= 0 && tempx < 8) {
-                queen.position.x = tempx;
-                console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
-                updateposition(queen.position.x, queen.position.y);
-
-
-            } else {
-                console.log("Outside the Boundary");
-
-            }
-            break;
-        }
+                        }
+                        break;
+                    }
 
 
+                    case 's': {
+                        let tempx = queen.position.x + steps;
 
-        case 'e': {
-            let tempy = queen.position.y + steps;
+                        if (tempx >= 0 && tempx < 8) {
+                            queen.position.x = tempx;
+                            console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
+                            updateposition(queen.position.x, queen.position.y);
 
-            if (tempy >= 0 && tempy < 8) {
 
-                queen.position.y = tempy;
-                console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
-                updateposition(queen.position.x, queen.position.y);
+                        } else {
+                            console.log("Outside the Boundary");
 
-            } else {
-                console.log("Outside the Boundary");
-
-            }
-            break;
-        }
+                        }
+                        break;
+                    }
 
 
 
-        case 'w': {
-            let tempy = queen.position.y - steps;
+                    case 'e': {
+                        let tempy = queen.position.y + steps;
 
-            if (tempy >= 0 && tempy < 8) {
+                        if (tempy >= 0 && tempy < 8) {
 
-                queen.position.y = tempy;
-                console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
-                updateposition(queen.position.x, queen.position.y);
+                            queen.position.y = tempy;
+                            console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
+                            updateposition(queen.position.x, queen.position.y);
 
-            } else {
-                console.log("Outside the Boundary");
+                        } else {
+                            console.log("Outside the Boundary");
 
-            }
-            break;
-        }
-
-
-
-        case 'nw': {
-            let tempx = queen.position.x - steps;
-            let tempy = queen.position.y - steps;
-
-            if (tempx >= 0 && tempx < 8) {
-                if (tempy >= 0 && tempy < 8) {
-
-                    queen.position.x = tempx;
-                    queen.position.y = tempy;
-                    console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
-                    updateposition(queen.position.x, queen.position.y);
-
-                } else {
-                    console.log("Outside the Boundary");
-                }
-
-            } else {
-                console.log("Outside the Boundary");
-            }
-            break;
-        }
+                        }
+                        break;
+                    }
 
 
 
+                    case 'w': {
+                        let tempy = queen.position.y - steps;
 
-        case 'ne': {
-            let tempx = queen.position.x - steps;
-            let tempy = queen.position.y + steps;
+                        if (tempy >= 0 && tempy < 8) {
 
-            if (tempx >= 0 && tempx < 8) {
-                if (tempy >= 0 && tempy < 8) {
-                    queen.position.x = tempx;
-                    queen.position.y = tempy;
-                    console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
-                    updateposition(queen.position.x, queen.position.y);
+                            queen.position.y = tempy;
+                            console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
+                            updateposition(queen.position.x, queen.position.y);
 
-                } else {
-                    console.log("Outside the Boundary");
-                }
+                        } else {
+                            console.log("Outside the Boundary");
 
-            } else {
-                console.log("Outside the Boundary");
-            }
-            break;
-        }
-
-        case 'se': {
-            let tempx = queen.position.x + steps;
-            let tempy = queen.position.y + steps;
-
-            if (tempx >= 0 && tempx < 8) {
-                if (tempy >= 0 && tempy < 8) {
-                    queen.position.x = tempx;
-                    queen.position.y = tempy;
-                    console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
-                    updateposition(queen.position.x, queen.position.y);
-
-                } else {
-                    console.log("Outside the Boundary");
-                }
-
-            } else {
-                console.log("Outside the Boundary");
-            }
-            break;
-        }
+                        }
+                        break;
+                    }
 
 
 
-        case 'sw': {
-            let tempx = queen.position.x + steps;
-            let tempy = queen.position.y - steps;
-            if (tempx >= 0 && tempx < 8) {
-                if (tempy >= 0 && tempy < 8) {
-                    queen.position.x = tempx;
-                    queen.position.y = tempy;
-                    console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
-                    updateposition(queen.position.x, queen.position.y);
+                    case 'nw': {
+                        let tempx = queen.position.x - steps;
+                        let tempy = queen.position.y - steps;
 
-                } else {
-                    console.log("Outside the Boundary");
-                }
+                        if (tempx >= 0 && tempx < 8) {
+                            if (tempy >= 0 && tempy < 8) {
 
-            } else {
-                console.log("Outside the Boundary");
-            }
-            break;
-        }
+                                queen.position.x = tempx;
+                                queen.position.y = tempy;
+                                console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
+                                updateposition(queen.position.x, queen.position.y);
+
+                            } else {
+                                console.log("Outside the Boundary");
+                            }
+
+                        } else {
+                            console.log("Outside the Boundary");
+                        }
+                        break;
+                    }
 
 
 
 
+                    case 'ne': {
+                        let tempx = queen.position.x - steps;
+                        let tempy = queen.position.y + steps;
+
+                        if (tempx >= 0 && tempx < 8) {
+                            if (tempy >= 0 && tempy < 8) {
+                                queen.position.x = tempx;
+                                queen.position.y = tempy;
+                                console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
+                                updateposition(queen.position.x, queen.position.y);
+
+                            } else {
+                                console.log("Outside the Boundary");
+                            }
+
+                        } else {
+                            console.log("Outside the Boundary");
+                        }
+                        break;
+                    }
+
+                    case 'se': {
+                        let tempx = queen.position.x + steps;
+                        let tempy = queen.position.y + steps;
+
+                        if (tempx >= 0 && tempx < 8) {
+                            if (tempy >= 0 && tempy < 8) {
+                                queen.position.x = tempx;
+                                queen.position.y = tempy;
+                                console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
+                                updateposition(queen.position.x, queen.position.y);
+
+                            } else {
+                                console.log("Outside the Boundary");
+                            }
+
+                        } else {
+                            console.log("Outside the Boundary");
+                        }
+                        break;
+                    }
 
 
 
+                    case 'sw': {
+                        let tempx = queen.position.x + steps;
+                        let tempy = queen.position.y - steps;
+                        if (tempx >= 0 && tempx < 8) {
+                            if (tempy >= 0 && tempy < 8) {
+                                queen.position.x = tempx;
+                                queen.position.y = tempy;
+                                console.log("Current Position is: " + board[queen.position.x][queen.position.y]);
+                                updateposition(queen.position.x, queen.position.y);
 
+                            } else {
+                                console.log("Outside the Boundary");
+                            }
+
+                        } else {
+                            console.log("Outside the Boundary");
+                        }
+                        break;
+                    }
 
     }
 
